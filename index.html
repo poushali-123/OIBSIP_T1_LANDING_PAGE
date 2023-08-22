@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#" class="logo">Mom's Kitchen</a>
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <span class="bar">
+                        <input type="text"  placeholder="search">
+                        <button type="submit"><i class=" fa fa-search" aria-hidden="true"></i></button>
+                    </span>
+                    
+                </li>
+
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 id="t1">We Offer<br><span>Most Delicious Food</span></h2>
+                
+                <p id="p1">What's your food mood today?<br>Delicious biryani , pizza or burgers?<br>Order food online and get delicious meals delivered to your doorstep from Mom's Kitchen .</p>
+                <span>
+                    <a href="#" class="btn">View Items</a>
+                    <a href="#" class="btn2">Order Now</a>
+                </span>
+                
+            </div>
+            <div class="imgBox">
+                <img src="pic17.jpg" class="food" id="dp">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="pic17.jpg" class="food1" onclick="imgSlider('pic17.jpg');changeColor('#52E7CE ')"></li>
+            <li><img src="pic11.jpg" class="food1" onclick="imgSlider('pic11.jpg');changeColor('#000')"></li>
+            <li><img src="pic6.jpg" class="food1" onclick="imgSlider('pic6.jpg');changeColor('#6EE0FF ')"></li>
+            <li><img src="pic7.jpg" class="food1" onclick="imgSlider('pic7.jpg');changeColor('#CDFBB8')"></li>
+            
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-2x fa fa-facebook" id="icon"></i></a></li>
+            <li><a href="#"><i class="fa-2x fa fa-twitter" id="icon1"></i></a></li>
+            <li><a href="#"><i class="fa-2x fa fa-instagram" id="icon2"></i></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.food').src = anything;
+        }
+        function changeColor(color){
+            const sec=document.querySelector('.sec');
+            sec.style.background = color;
+
+            if(color == '#000' )
+            {
+                document.getElementById('t1').style.color = 'white';
+                document.getElementById('p1').style.color = 'white';
+
+                document.getElementById('icon').style.color = 'white';
+                document.getElementById('icon1').style.color = 'white';
+                document.getElementById('icon2').style.color = 'white';
+            }
+            else
+            {
+                document.getElementById('t1').style.color = 'black';
+                document.getElementById('p1').style.color = 'black';
+
+                document.getElementById('icon').style.color = 'black';
+                document.getElementById('icon1').style.color = 'black';
+                document.getElementById('icon2').style.color = 'black';
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
